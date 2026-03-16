@@ -5,9 +5,9 @@ DirectoryIndex /index.html
 FallbackResource /public.php
 
 # Re-write all http requests to https
-#RewriteEngine On
-#RewriteCond %{SERVER_PORT} !=443
-#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+RewriteEngine On
+RewriteCond %{SERVER_PORT} !=443
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 # Use UTF-8
 AddDefaultCharset utf-8
