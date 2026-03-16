@@ -8,10 +8,10 @@
 	    "samesite" => "lax"
     ]);
 
-    define('HOST', '<Your Database server>');
-    define('DATABASE', '<Your Database>');
-    define('USER', '<Your Database user');
-    define('PASSWORD', '<Your Database password>');
+    define('HOST', '<Your database server address>');
+    define('DATABASE', '<your database>');
+    define('USER', '<your database user>');
+    define('PASSWORD', '<your database password>');
     define('INIT_QUERY', 'SET NAMES UTF8');
 
     # Root-Directory
