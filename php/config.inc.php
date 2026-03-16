@@ -18,7 +18,8 @@
     define("ROOT_DIR", $_SERVER["DOCUMENT_ROOT"]);
 
     // If you change one of this following constants, make sure you also change the constants in the following files:
-    //
+    // > scripts/definitions.js
+    // > scripts/start/start-definitions.js
 
     // Min username length
     define('MIN_USERNAME_LENGTH', 4);
