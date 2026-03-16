@@ -1,0 +1,212 @@
+@font-face {
+	font-family: "Shlop";
+	font-display: swap;
+	src: url(/fonts/shlop_rg.ttf) format("truetype");
+}
+
+.halloween {
+	font-family: Shlop;
+	font-size: 100px;
+	color: #ed6202;
+	text-shadow: 0 0 10px #ed6202;
+	letter-spacing: .75rem;
+	animation: blitz 5s ease-in-out 3s infinite;
+}
+
+@keyframes blitz {
+	10% {
+		color: black;
+		text-shadow: none;
+	}
+	15% {
+		color: #ed6202;
+		text-shadow: 0 0 10px #ed6202;
+	}
+	20% {
+		color: black;
+		text-shadow: none;
+	}
+	25% {
+		color: #ed6202;
+		text-shadow: 0 0 10px #ed6202;
+	}
+}
+
+.spider:nth-child(1) {
+	position: relative;
+	top: 100px;
+	left: 5%;
+	background-color: black;
+	width: 55px;
+	height: 45px;
+	border-radius: 50%;
+	transition: top 1.5s linear;
+	animation: move 1.75s ease-in-out 250ms infinite alternate;
+}
+
+.spider:nth-child(2) {
+	position: relative;
+	top: 100px;
+	left: 26%;
+	background-color: black;
+	width: 55px;
+	height: 45px;
+	border-radius: 50%;
+	transition: top 1.5s linear;
+	animation: move 1.75s ease 500ms infinite alternate;
+}
+
+.spider:nth-child(3) {
+	position: relative;
+	top: 100px;
+	left: 56%;
+	background-color: black;
+	width: 55px;
+	height: 45px;
+	border-radius: 50%;
+	transition: top 1.5s linear;
+	animation: move 1.75s linear 750ms infinite alternate;
+}
+
+.spider:nth-child(4) {
+	position: relative;
+	top: 100px;
+	left: 79%;
+	background-color: black;
+	width: 55px;
+	height: 45px;
+	border-radius: 50%;
+	transition: top 1.5s linear;
+	animation: move 1.75s ease-in-out 1s infinite alternate;
+}
+
+.spider::before {
+	content: "";
+	position: absolute;
+	top: -500px;
+	left: 50%;
+	width: 1px;
+	height: 500px;
+	background-color: white;
+}
+
+@keyframes move {
+	from {
+		top: 25px;
+	}
+	to {
+		top: 200px;
+	}
+}
+
+.eye-left {
+	position: absolute;
+	bottom: 10px;
+	left: 25%;
+	width: 15px;
+	height: 20px;
+	background-color: white;
+	border-radius: 50%;
+}
+
+.eye-left::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: 5px;
+	width: 5px;
+	height: 5px;
+	background-color: black;
+	border-radius: 50%;
+}
+
+.eye-right {
+	position: absolute;
+	bottom: 10px;
+	right: 25%;
+	width: 15px;
+	height: 20px;
+	background-color: white;
+	border-radius: 50%;
+}
+
+.eye-right::before {
+	content: "";
+	position: absolute;
+	right: 50%;
+	bottom: 5px;
+	width: 5px;
+	height: 5px;
+	background-color: black;
+	border-radius: 50%;
+}
+
+.leg-left {
+	position: absolute;
+	left: -30px;
+	width: 45px;
+	height: 50px;
+	border: 2px solid black;
+	border-color: black transparent transparent transparent;
+	border-radius: 50%;
+	transform-origin: 100% 0;
+}
+
+.leg-left:nth-child(3) {
+	top: 5px;
+	animation: move-left 250ms linear 250ms infinite alternate;
+}
+
+.leg-left:nth-child(4) {
+	top: 15px;
+	animation: move-left 250ms linear 500ms infinite alternate;
+}
+
+.leg-left:nth-child(5) {
+	top: 25px;
+	animation: move-left 250ms linear 700ms infinite alternate;
+}
+
+@keyframes move-left {
+	from {
+		transform: rotate(-5deg);
+	}
+	to {
+		transform: rotate(30deg);
+	}
+}
+
+.leg-right {
+	position: absolute;
+	right: -30px;
+	width: 45px;
+	height: 50px;
+	border: 2px solid black;
+	border-color: black transparent transparent transparent;
+	border-radius: 50%;
+	transform-origin: 0 0;
+}
+
+.leg-right:nth-child(6) {
+	top: 5px;
+	animation: move-right 250ms linear 250ms infinite alternate;
+}
+
+.leg-right:nth-child(7) {
+	top: 15px;
+	animation: move-right 250ms linear 500ms infinite alternate;
+}
+
+.leg-right:nth-child(8) {
+	top: 25px;
+	animation: move-right 250ms linear 700ms infinite alternate;
+}
+
+@keyframes move-right {
+	from {
+		transform: rotate(-5deg);
+	}
+	to {
+		transform: rotate(30deg);
+	}
+}

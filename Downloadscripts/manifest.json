@@ -1,0 +1,15 @@
+{
+    "name": "Clatcher - Hallo Welt",
+    "description": "First Clatcher Extension Layer",
+    "version": "1.0",
+    "icons": {
+        "128": "favicon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*.clatcher.org/start.php"],
+            "js": [ "clatcher-script.js", "index.js" ]
+        }
+    ],
+    "manifest_version": 3
+}

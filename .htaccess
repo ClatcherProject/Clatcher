@@ -1,0 +1,29 @@
+# Frontpage File
+DirectoryIndex /index.html
+
+# API-File
+FallbackResource /public.php
+
+# Re-write all http requests to https
+#RewriteEngine On
+#RewriteCond %{SERVER_PORT} !=443
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# Use UTF-8
+AddDefaultCharset utf-8
+
+# Deny access to the backup.sh file
+<Files "backup.sh">
+	Require all denied
+</Files>
+
+# Deny iframe-access
+# Header always append X-Frame-Options "https://*.clatcher.org/*"
+<FilesMatch ".">
+    Header always set X-Frame-Options "SAMEORIGIN"
+</FilesMatch>
+
+# Ausnahme für URLs /embed/post/<Zahl>
+SetEnvIf Request_URI "^/embed/post/\d+$" ALLOW_IFRAME
+Header always unset X-Frame-Options env=ALLOW_IFRAME
+
