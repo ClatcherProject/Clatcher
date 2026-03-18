@@ -8,6 +8,10 @@
 	    "samesite" => "lax"
     ]);
 
+    /**
+     * Your database connection. This are my development account data, so it's just an example.
+     * Change the data with your mysql account.
+     */
     define('HOST', 'localhost');
     define('DATABASE', 'Clatcher');
     define('USER', 'Tuxchen');
