@@ -22,7 +22,7 @@ class Response {
     }
 
     public static function forbidden($info) {
-        self::response(401, "Forbidden", $info);
+        self::response(403, "Forbidden", $info);
     }
 
     public static function notfound($info) {
