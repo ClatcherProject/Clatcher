@@ -93,16 +93,6 @@ class DELETE {
             return;
         }
 
-        $stmt = $conn->prepare("SELECT posts_bild FROM Posts WHERE posts_id=?");
-        $stmt->bind_param("i", $pid);
-        $stmt->execute();
-        $stmt->bind_result($img);
-        $stmt->fetch();
-        $stmt->close();
-
-        if($img !== NULL)
-            unlink(ROOT_DIR . $img);
-
         $stmt = $conn->prepare("DELETE FROM Posts WHERE posts_id=?");
         $stmt->bind_param("i", $pid);
         $stmt->execute();
