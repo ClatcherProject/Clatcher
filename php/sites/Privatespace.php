@@ -300,7 +300,7 @@ class Privatespace {
                                         <img style="cursor: zoom-in;" class="embed-responsive-item" ng-src="{{path}}">
                                     </div>
                                 </a>
-                                <iframe ng-if="file == 'file'" style="border: none; height: 500px;" ng-src="{{path}}"></iframe>
+                                <iframe ng-if="file == 'file'" style="border: none; height: 500px;" ng-src="{{path}}" sandbox="allow-scripts"></iframe>
                                 <button id="download-btn" class="stylish" data-bloburl="{{path}}" data-filename="{{filename}}" ng-click="downloadFile();"><i class="fas fa-download"></i></button>
                                 <a class="stylish" href="javascript:void(0);" ng-click="clearFile();"><i class="fas fa-times"></i></a>
                             </div>
