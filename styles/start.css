@@ -778,16 +778,10 @@ div[id$="-body"] {
 	text-align: center;
 	height: 100%;
 	z-index: 1;
-	border-width: 2px;
+	border-width: 1px;
 	border-style: solid;
-	border-image: linear-gradient(to right, #FF5161, #FF53cd, #9461fd, #2dd9fe, #00fe9b, #ffdb4e, #fefefe) 1;
-	animation: 8s anim-border linear infinite;
-}
-
-@keyframes anim-border {
-	to {
-		border-image: linear-gradient(to right, #fefefe, #ffdb4e, #00fe9b, #2dd9fe, #9461fd, #ff53cd, #ff5161) 1;
-	}
+	border-image: linear-gradient(to bottom, #FF5161, #FF53cd, #9461fd, #2dd9fe, #00fe9b, #ffdb4e, #fefefe) 1;
+	border-top: none;
 }
 
 div[class*="clatcher-darktheme"] > div[id$="-body"] {
