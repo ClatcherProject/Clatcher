@@ -89,7 +89,7 @@ class PUT {
             return;
         }
 
-        srand((double) microtime()*1000000);
+        srand((float) microtime()*1000000);
         $code = "";
 
         for($i = 0; $i < 10; $i++) {
