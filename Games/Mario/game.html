@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="de">
     <head>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+	</style>
         <script src="/Games/Mario/enjine.min.js"></script>
         <script src="/Games/Mario/mario.min.js"></script>
     </head>
     <body>
-        <canvas id="mario-game" width="614.40" height="460.80"></canvas>
+        <canvas id="mario-game" style="width: 100%; height: 480px;"></canvas>
 
         <script>
             new Enjine.Application().Initialize(new Mario.LoadingState(), 320, 240);

@@ -4,9 +4,11 @@ DirectoryIndex /index.html
 # API-File
 FallbackResource /public.php
 
-# Re-write all http requests to https
+# Re-write all http requests to https if not using .onion
+
 RewriteEngine On
-RewriteCond %{SERVER_PORT} !=443
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP_HOST} !^sxflgak4gpnj2gjkq4vfltuu24znhath5wrdjwefqlmv2xj7lnbjxxid\.onion$ [NC] # this is my onion-link
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 # Use UTF-8

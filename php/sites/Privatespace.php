@@ -343,7 +343,7 @@ class Privatespace {
                     </div>
                     <div id="games-body" class="anim-border">
 
-                        <div id="current-game">
+                        <div id="current-game" class="mt-n15">
                         </div>
                         <br />
                         <hr />

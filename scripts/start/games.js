@@ -16,7 +16,7 @@ app.controller("gamesCtrl", ($scope, $http, showInfo) => {
             case 1:
 
                 current_game.innerHTML = `
-                    <iframe style="border: none;" src="/Games/Mario/game.html" width="640" height="480"></iframe>
+                    <iframe style="border: none;" src="/Games/Mario/game.html" width="680" height="480"></iframe>
                 `;
 
                 break;
