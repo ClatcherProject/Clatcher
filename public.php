@@ -6,6 +6,7 @@
     $conn->query(INIT_QUERY);
 
     $uri = substr($_SERVER["REQUEST_URI"], 1, strlen($_SERVER["REQUEST_URI"]));
+    $uri = urldecode($uri);
 
     if(strpos($uri, "?") !== FALSE) {
         $uri = substr($uri, 0, strpos($uri, "?"));
@@ -21,7 +22,7 @@
         Index::load();
     });
 
-    $router->add("GET", "#^(\w+)$#", function($name) use($conn) {
+    $router->add("GET", "#^([\w\sÄÖÜäöü]+)$#", function($name) use($conn) {
         Usersite::show($conn, $name);
     });
 
@@ -322,7 +323,7 @@
         DELETE::removeFile($conn, unserialize($_SESSION["user"]), $params["sid"]);
     });
 
-    $router->add("DELETE", "#^(\w+)/removefriend$#", function($name) use($conn) {
+    $router->add("DELETE", "#^([\w\sÄÖÜäöü]+)/removefriend$#", function($name) use($conn) {
         if(!isset($_SESSION["user"])) {
             Response::forbidden("Not signed in");
             return;
@@ -407,12 +408,12 @@
         GET::loadPublicComments($conn, $_GET["user"], $_GET["id"]);
     });
 
-    $router->add("GET", "#^answer/(\d+)/(\w+)$#", function($id, $name) use($conn) {
+    $router->add("GET", "#^answer/(\d+)/([\w\sÄÖÜäöü]+)$#", function($id, $name) use($conn) {
         $user = isset($_SESSION["user"]) ? unserialize($_SESSION["user"]) : NULL;
         GET::loadUserDiscussion($conn, $user, $name, $id);
     });
 
-    $router->add("GET", "#^load/(\w+)/friends$#", function($name) use($conn) {
+    $router->add("GET", "#^load/([\w\sÄÖÜäöü]+)/friends$#", function($name) use($conn) {
         $u = User::makeUser($conn, $name);
 
         if($u->getId() === NULL) {

@@ -367,6 +367,7 @@ class POST {
                 case "image/gif":
                     if(filesize($file) > MAX_PUBLIC_IMAGE_FILESIZE) {
                         Response::badRequest("Maximum " . (MAX_PUBLIC_IMAGE_FILESIZE / (1024*1024)) . " MB");
+                        return;
                     }
                     break;
                 default:
