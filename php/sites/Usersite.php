@@ -101,9 +101,9 @@ class Usersite {
                     <nav class="navbar bg-dark text-left">
                         <a class="logo text-light" href="/">
                             <?php if($result["users_logo"] != NULL): ?>
-                                <img class="rounded-circle" src="<?php echo($result["users_logo"]); ?>" width="35" height="35">
+                                <img class="rounded-circle" src="<?php echo($result["users_logo"]); ?>" width="50" height="50">
                             <?php else: ?>
-                                <img class="rounded-circle" src="/pics/default.png" width="35" height="35">
+                                <img class="rounded-circle" src="/pics/default.png" width="50" height="50">
                             <?php endif; ?>
                         </a>
 
