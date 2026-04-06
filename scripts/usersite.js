@@ -232,6 +232,8 @@ app.controller("tab2Ctrl", ($scope, $location, $http, $sce, constants, postActio
                 window.location.reload();
             }, error => {
                 $scope.showInfo(error.data.info);
+                $scope.uploadInfo = "Post";
+                document.querySelector("#blogfile").value = "";
             });
         }
     };
