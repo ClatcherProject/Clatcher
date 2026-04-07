@@ -438,6 +438,7 @@ td {
 	text-decoration: none;
 	font-family: Rajdhani, unscii16, Inconsolata, monospace;
 	letter-spacing: .5rem;
+	font-size: 2rem;
 }
 
 .logo:hover {
